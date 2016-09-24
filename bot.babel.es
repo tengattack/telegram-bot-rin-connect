@@ -25,6 +25,9 @@ function torrentsMessageHTML(torrents) {
   return torrentLines.join('\n')
 }
 function notifyUpdates(torrents) {
+  if (!allowChatIds) {
+    return
+  }
   const html = '新的種子：\n'
              + torrentsMessageHTML(torrents)
   allowChatIds.forEach(chat_id => {
