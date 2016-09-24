@@ -56,7 +56,7 @@ function startCheckTorrentsUpdates() {
 }
 rin.getTorrentList().then(torrents => {
   // init first torrent ids
-  torrentIds = torrents.map(t => t.id)
+  torrentIds = torrents.map(t => t._id)
   startCheckTorrentsUpdates()
 })
 
